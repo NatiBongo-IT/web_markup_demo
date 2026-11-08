@@ -1,8 +1,510 @@
-/* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */
-body {
-  background-color: yellow;
+
+:root {
+  --bg: #F7F1E4;
+  --green: #1F4F3A;
+  --gold: #D4A017;
+  --light-green: #B3D0AE;
+  --grey: #D9D9D9;
+  --text: #222222;
+  --stripe: #CCFFFF;
+  --white: #FFFFFF;
 }
 
-p {
-  color: magenta;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  color: var(--green);
+  line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1rem; }
+
+
+header {
+  position: relative; 
+  top: auto;
+  z-index: auto;
+
+  background-color: var(--green);
+  width: 100%;
+
+  padding: 0.8rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--bg);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--gold);
+  color: var(--green);
+}
+
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search input {
+  padding: 0.5rem 0.8rem;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: var(--grey);
+  color: var(--text);
+  font-family: inherit;
+  width: 160px;
+}
+
+.search input:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.search-button {
+  background-color: var(--gold);
+  color: var(--green);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.search-button:hover {
+  background-color: var(--bg);
+  color: var(--green);
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-text {
+  margin-top: 2rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto 1.5rem;
+}
+
+
+.button {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--green);
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+  background-color: var(--green);
+  color: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+
+.info-box {
+  background-color: var(--light-green);
+  padding: 2.5rem;
+  border-radius: 12px;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+
+.page-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.page-intro p {
+  font-size: 1.15rem;
+}
+
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.feature img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.accordion details {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion summary {
+  background-color: var(--grey);
+  color: var(--green);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::after {
+  content: "\25BC";
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+
+.accordion details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.accordion summary:hover {
+  background-color: #c4c4c4;
+}
+
+.accordion details[open] summary {
+  background-color: var(--light-green);
+}
+
+.accordion .accordion-content {
+  background-color: var(--white);
+  padding: 1.5rem;
+}
+
+
+.activity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.activity.reverse img {
+  order: 2;
+}
+
+.activity img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.activity img:hover {
+  transform: scale(1.02);
+}
+
+.activity ul {
+  margin: 0 0 1.5rem 1.2rem;
+}
+
+.activity li {
+  margin-bottom: 0.4rem;
+}
+
+
+.highlight {
+  background-color: var(--green);
+  color: var(--bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.highlight h2 {
+  color: var(--gold);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--green);
+  padding-bottom: 0.8rem;
+}
+
+th, td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border: 1px solid var(--grey);
+}
+
+thead th {
+  background-color: var(--green);
+  color: var(--bg);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--stripe);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--white);
+}
+
+
+form.contact-form {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 700px;
+}
+
+form.contact-form label {
+  font-weight: 600;
+  color: var(--green);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+form.contact-form input,
+form.contact-form select,
+form.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: var(--grey);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+form.contact-form input:focus,
+form.contact-form select:focus,
+form.contact-form textarea:focus {
+  border-color: var(--green);
+  outline: none;
+}
+
+form.contact-form input:invalid:not(:placeholder-shown) {
+  border-color: #b3261e;
+}
+
+form.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+
+footer {
+  background-color: var(--green);
+  color: var(--bg);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer a {
+  color: var(--gold);
+}
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.8rem 1rem;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    white-space: normal;
+  }
+
+  .search {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .search input {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  
+  #safety-tips .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+  .card img {
+    height: 170px;
+  }
+
+  .card-body {
+    padding: 1.1rem;
+  }
 }

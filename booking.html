@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel to Ghana | Booking</title>
+  <meta name="description" content="Plan and book your trip to Ghana. View prices, request booking, and see safety tips." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/undefined-.png" alt="Travel to Ghana logo">
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Ghana</a></li>
+        <li><a href="activities.html">Activities &amp; Fun</a></li>
+        <li><a href="culture.html">Culture &amp; Food</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <form class="search" role="search" action="#" method="get">
+      <label for="search-input" class="visually-hidden">Search the site</label>
+      <input type="search" id="search-input" name="q" placeholder="Search...">
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </header>
+
+  <main>
+
+    <section class="page-intro">
+      <h1>Booking</h1>
+      <p>Check what you need before you travel, compare activity prices, and send your booking request.</p>
+
+      <p>
+        <a href="safety-tips.html" class="button">Safety Tips</a>
+        <a href="contact.html" class="button">Contact us</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Activity prices</h2>
+
+      <table>
+        <caption>Prices per person (USD)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beach day with lunch</td>
+            <td>1 day</td>
+            <td>$45</td>
+          </tr>
+          <tr>
+            <td>Mole National Park safari</td>
+            <td>2 days</td>
+            <td>$180</td>
+          </tr>
+          <tr>
+            <td>Kakum canopy walk</td>
+            <td>Half day</td>
+            <td>$35</td>
+          </tr>
+          <tr>
+            <td>Cape Coast Castle tour</td>
+            <td>Half day</td>
+            <td>$30</td>
+          </tr>
+          <tr>
+            <td>Cooking class</td>
+            <td>3 hours</td>
+            <td>$40</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Book your trip</h2>
+
+      <form class="contact-form" action="#" method="post">
+        <section>
+          <label for="book-name">Full name</label>
+          <input type="text" id="book-name" name="name" placeholder="Your full name" required>
+        </section>
+
+        <section>
+          <label for="book-email">Email</label>
+          <input type="email" id="book-email" name="email" placeholder="you@example.com" required>
+        </section>
+
+        <section>
+          <label for="book-activity">Activity</label>
+          <select id="book-activity" name="activity" required>
+            <option value="">Choose an activity</option>
+            <option value="beach">Beach day with lunch</option>
+            <option value="safari">Mole National Park safari</option>
+            <option value="canopy">Kakum canopy walk</option>
+            <option value="castle">Cape Coast Castle tour</option>
+            <option value="cooking">Cooking class</option>
+          </select>
+        </section>
+
+        <section>
+          <label for="book-date">Date</label>
+          <input type="date" id="book-date" name="date" required>
+        </section>
+
+        <section>
+          <label for="book-people">Number of people</label>
+          <input type="number" id="book-people" name="people" min="1" max="20" value="1" required>
+        </section>
+
+        <section>
+          <label for="book-notes">Special requests</label>
+          <textarea id="book-notes" name="notes" placeholder="Tell us anything we should know"></textarea>
+        </section>
+
+        <button type="submit" class="button">Send booking request</button>
+      </form>
+    </section>
+
+    <section>
+      <article class="info-box">
+        <h2>Need help?</h2>
+        <p>If you have questions, visit Contact or read the Safety Tips first.</p>
+        <p>
+          <a href="contact.html" class="button">Contact us</a>
+          <a href="safety-tips.html" class="button">Safety Tips</a>
+        </p>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Travel to Ghana. All rights reserved. | <a href="contact.html">Contact us</a></p>
+  </footer>
+
+</body>
+</html>

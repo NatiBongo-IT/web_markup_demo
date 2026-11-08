@@ -1,14 +1,94 @@
-<!-- add all items from grading group 1 and 2. Search for items in group 5 that refer to css f.e. author attribute value-->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Markup Starter</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
-    <p>Hello web markup!</p>
-    <img src="img/banana-dance.gif" alt="banana dance" />
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel to Ghana: discover beaches, history, culture and food in the Gateway to Africa.">
+  <title>Travel to Ghana | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/undefined-.png" alt="Travel to Ghana logo">
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Ghana</a></li>
+        <li><a href="activities.html">Activities &amp; Fun</a></li>
+        <li><a href="culture.html">Culture &amp; Food</a></li>
+        <li><a href="booking.html">Booking &amp; Contact</a></li>
+      </ul>
+    </nav>
+    <form class="search" role="search" action="#" method="get">
+      <label for="search-input" class="visually-hidden">Search the site</label>
+      <input type="search" id="search-input" name="q" placeholder="Search...">
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <img src="img/AFR-©-OCEANA-Michael-Aboya-Ghana-Cape-3-Points-DJI_426-scaled.jpg.webp" alt="Sunny beach with palm trees on the coast of Ghana">
+      <article class="hero-text">
+        <h1>Welcome to Ghana</h1>
+        <p>Discover Ghana Culture History and Adventure for Dutch Travellers.</p>
+        <a href="about.html" class="button">Explore more</a>
+      </article>
+    </section>
+
+    <section>
+      <article class="info-box">
+        <h2>Before European colonial rule</h2>
+        <p>Long before European traders arrived, the land now called Ghana was home to powerful kingdoms such as the Ashanti Empire, known for its gold, craftsmanship and organized government.</p>
+        <p>Trade routes connected the region with the rest of West Africa, and its culture and traditions still shape the country today.</p>
+        <a href="about.html" class="button">Learn More</a>
+      </article>
+    </section>
+
+    <section>
+      <h2>Plan your visit</h2>
+      <section class="card-grid">
+        <article class="card">
+          <img src="img/360_F_75565421_Y8hklrQd8ZU9HWnqBmiFc96dztKkRZ8p.jpg" alt="The Independence Arch in Accra, Ghana">
+          <section class="card-body">
+            <h3>Activities &amp; Fun</h3>
+            <p>Travel around Ghana for fun and activities, this is an Independence Arch in Accra.</p>
+            <a href="activities.html" class="button">Explore Activities</a>
+          </section>
+        </article>
+
+        <article class="card">
+          <img src="img/african-art-28439935.jpg" alt="Designs of African art and local crafts">
+          <section class="card-body">
+            <h3>Culture &amp; Food</h3>
+            <p>Explore the designs of African art, local crafts, culture food and cloths.</p>
+            <a href="culture.html" class="button">Learn More</a>
+          </section>
+        </article>
+
+        <article class="card">
+          <img src="img/newsarticle-287114-scaled-600x0.jpg" alt="Suitcase and travel documents ready for a trip">
+          <section class="card-body">
+            <h3>Booking &amp; Contact</h3>
+            <p>Check visa and health info, then build your day.</p>
+            <a href="booking.html" class="button">Build your day</a>
+          </section>
+        </article>
+      </section>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Travel to Ghana. All rights reserved. | <a href="contact.html">Contact us</a></p>
+  </footer>
+
+</body>
 </html>
