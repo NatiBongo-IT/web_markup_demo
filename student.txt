@@ -1,5 +1,5 @@
 Student name: Nathaniel Nana Sarfo
 Student number: 759255
 Student class: IT1C
-GitHub Repository: your github repository URL
-GitHub Pages URL: your github pages URL
+GitHub Repository: https://github.com/NatiBongo-IT/web_markup_demo
+GitHub Pages URL: https://natibongo-it.github.io/web_markup_demo/
